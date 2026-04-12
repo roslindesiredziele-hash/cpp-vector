@@ -49,6 +49,22 @@ int main() {
         assert(result.distance == std::sqrt(2.0));
     }
 
+    {
+        // Test 5: findFarthest() finds the most distant pair
+        std::vector<City> cities = {
+            City("A", 0, 0),
+            City("B", 3, 4),   // distance 5
+            City("C", 10, 10)  // farthest from A (distance sqrt(200))
+        };
+
+        CityPair result = findFarthest(cities);
+
+        // The farthest pair should be A and C
+        assert((result.a.name == "A" && result.b.name == "C") ||
+            (result.a.name == "C" && result.b.name == "A"));
+
+        assert(result.distance == std::sqrt(200.0));
+    }
 
 
     return 0;

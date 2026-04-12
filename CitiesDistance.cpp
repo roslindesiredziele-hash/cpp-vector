@@ -43,3 +43,21 @@ CityPair findClosest(const std::vector<City>& cities) {
 
     return { A, B, best };
 }
+
+CityPair findFarthest(const std::vector<City>& cities) {
+    double best = -1.0;
+    City A("", 0, 0), B("", 0, 0);
+
+    for (size_t i = 0; i < cities.size(); ++i) {
+        for (size_t j = i + 1; j < cities.size(); ++j) {
+            double d = distance((City&)cities[i], (City&)cities[j]);
+            if (d > best) {
+                best = d;
+                A = cities[i];
+                B = cities[j];
+            }
+        }
+    }
+
+    return { A, B, best };
+}

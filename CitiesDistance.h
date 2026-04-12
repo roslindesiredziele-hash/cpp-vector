@@ -22,5 +22,7 @@ struct CityPair {
 };
 
 CityPair findClosest(const std::vector<City>& cities);
+CityPair findFarthest(const std::vector<City>& cities);
+
 
 std::vector<City> loadCities(const std::string& filename);
