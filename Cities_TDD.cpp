@@ -1,5 +1,6 @@
 #include <cassert>
 #include "CitiesDistance.h"
+#include <fstream>
 
 int main() {
     // Test 1: City stores fields
@@ -31,6 +32,23 @@ int main() {
         assert(cities[1].lat == 3);
         assert(cities[1].lon == 4);
     }
+
+    {
+        // Test 4: findClosest() finds the nearest pair
+        std::vector<City> cities = {
+            City("A", 0, 0),
+            City("B", 3, 4),   // distance 5
+            City("C", 1, 1)    // distance sqrt(2) from A
+        };
+
+        CityPair result = findClosest(cities);
+
+        assert((result.a.name == "A" && result.b.name == "C") ||
+            (result.a.name == "C" && result.b.name == "A"));
+
+        assert(result.distance == std::sqrt(2.0));
+    }
+
 
 
     return 0;

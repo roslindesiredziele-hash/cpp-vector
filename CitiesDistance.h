@@ -13,6 +13,14 @@ public:
     }
 };
 
-double distance(class City& a, class City& b);
+double distance(City& a, City& b);
+
+struct CityPair {
+    City a;
+    City b;
+    double distance;
+};
+
+CityPair findClosest(const std::vector<City>& cities);
 
 std::vector<City> loadCities(const std::string& filename);
