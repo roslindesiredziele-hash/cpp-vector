@@ -11,4 +11,7 @@ public:
         : name(_name), lat(_lat), lon(_lon)
     {
     }
+
+    double distance(class City& a, class City& b);
+
 };
