@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Vector\main.cpp" />
+    <ClCompile Include="Vector\main_Vec_test.cpp" />
     <ClCompile Include="Vector\Vec.cpp" />
   </ItemGroup>
   <ItemGroup>
