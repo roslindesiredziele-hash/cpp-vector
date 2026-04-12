@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 class City {
 public:
@@ -8,10 +9,10 @@ public:
     double lon;
 
     City(const std::string& _name, double _lat, double _lon)
-        : name(_name), lat(_lat), lon(_lon)
-    {
+        : name(_name), lat(_lat), lon(_lon) {
     }
-
-    double distance(class City& a, class City& b);
-
 };
+
+double distance(class City& a, class City& b);
+
+std::vector<City> loadCities(const std::string& filename);

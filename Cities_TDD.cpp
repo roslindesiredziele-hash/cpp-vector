@@ -13,5 +13,25 @@ int main() {
     City b("B", 3, 4);
     assert(distance(a, b) == 5.0);
 
+    {
+        // Test 3: loading cities from a file
+        std::ofstream f("test_cities.txt");
+        f << "alpha 1 2\n";
+        f << "beta 3 4\n";
+        f.close();
+
+        auto cities = loadCities("test_cities.txt");
+
+        assert(cities.size() == 2);
+        assert(cities[0].name == "alpha");
+        assert(cities[0].lat == 1);
+        assert(cities[0].lon == 2);
+
+        assert(cities[1].name == "beta");
+        assert(cities[1].lat == 3);
+        assert(cities[1].lon == 4);
+    }
+
+
     return 0;
 }
