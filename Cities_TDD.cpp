@@ -66,6 +66,35 @@ int main() {
         assert(result.distance == std::sqrt(200.0));
     }
 
+    {
+        // Test 6: Integration test for loading + closest + farthest
+        std::ofstream f("test_cities2.txt");
+        f << "A 0 0\n";
+        f << "B 3 4\n";     // distance 5
+        f << "C 1 1\n";     // distance sqrt(2) from A
+        f << "D 10 10\n";   // farthest from A
+        f.close();
+
+        auto cities = loadCities("test_cities2.txt");
+
+        // Closest pair should be A and C
+        CityPair closest = findClosest(cities);
+        assert(
+            (closest.a.name == "A" && closest.b.name == "C") ||
+            (closest.a.name == "C" && closest.b.name == "A")
+        );
+        assert(closest.distance == std::sqrt(2.0));
+
+        // Farthest pair should be A and D
+        CityPair farthest = findFarthest(cities);
+        assert(
+            (farthest.a.name == "A" && farthest.b.name == "D") ||
+            (farthest.a.name == "D" && farthest.b.name == "A")
+        );
+        assert(farthest.distance == std::sqrt(200.0));
+    }
+
+
 
     return 0;
 }
