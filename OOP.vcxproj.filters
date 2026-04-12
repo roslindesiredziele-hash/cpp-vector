@@ -18,7 +18,7 @@
     <ClCompile Include="Vector\Vec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vector\main_Vec_test.cpp">
+    <ClCompile Include="Vector\Vec_TDD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

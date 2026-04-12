@@ -1,1 +1,23 @@
+# Build folders
+x64/
+Debug/
+Release/
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.exe
+*.log
+
+# Visual Studio user-specific files
+*.user
+*.suo
+
+# C++ cache
+*.pch
+*.ipch
+
+# Temporary files
+*.tmp
+*.cache
 .vs/
