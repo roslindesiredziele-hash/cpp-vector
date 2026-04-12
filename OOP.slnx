@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="OOP.vcxproj" />
+  <Project Path="CitiesDistance/CitiesDistance.vcxproj" Id="44a95047-ce11-490b-a42d-c6c51c117154" />
+  <Project Path="Vector/Vector.vcxproj" Id="f62f821f-9f71-4212-af99-25fbbd02a847" />
 </Solution>
