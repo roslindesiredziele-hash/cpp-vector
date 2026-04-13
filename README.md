@@ -1,74 +1,40 @@
-# Vec — A Custom C++ Vector Implementation
+# OOP – C++ Multi‑Project Solution
 
-A custom C++ dynamic array container implemented from scratch using manual memory management, TDD, and a clean STL‑style API.  
-This project demonstrates strong understanding of C++ fundamentals, including constructors, destructors, copy semantics, resizing strategies, and safe resource handling.
+This repository contains a collection of C++ projects developed as part of my Object‑Oriented Programming practice.  
+Each project is fully independent, with its own source files, build configuration, and purpose, but all are grouped under a single Visual Studio solution for convenience.
 
----
+## 📁 Projects
 
-## 🚀 Features
+### 1. vector
+A custom implementation of a dynamic array class (`Vec`) written in modern C++.  
+Includes:
+- Rule of Three implementation  
+- Dynamic memory management  
+- Unit tests (TDD approach)  
+- Clean, maintainable project structure  
 
-- Fully custom dynamic array (`Vec`)
-- Manual memory management using `new[]` / `delete[]`
-- Rule of Three implemented correctly
-- Automatic resizing (growth strategy)
-- Bounds‑checked access (`at()`)
-- Fast unchecked access (`operator[]`)
-- Push, pop, clear, resize, empty, size, capacity
-- Comprehensive TDD test suite
-- Clean, readable code structure
+### 2. CitiesDistance
+A program that loads a dataset of cities and computes:
+- Closest pair of cities  
+- Farthest pair of cities  
+- Distance calculations using geographic coordinates  
 
----
+Includes TDD files and large datasets (`cities10k`, `cities100k`).
 
-## 📁 Project Structure
-/Vector
-    Vec.h
-    Vec.cpp
-    Vec_TDD.cpp
+### 3. cvrptw
+A work‑in‑progress project exploring algorithms for the Capacitated Vehicle Routing Problem with Time Windows.
 
-- **Vec.h** — class declaration and public API  
-- **Vec.cpp** — implementation  
-- **Vec_TDD.cpp** — test suite (TDD)
+## 🛠 Technologies
+- C++17  
+- Visual Studio  
+- TDD workflow  
+- Git & GitHub  
 
----
+## 📦 Structure
+OOP.sln
+├── vector/
+├── CitiesDistance/
+└── cvrptw/
 
-## 🧪 Test‑Driven Development
-
-This project was built using a TDD workflow:
-
-1. Write a failing test  
-2. Implement the minimal code to pass  
-3. Refactor  
-4. Repeat  
-
-The test suite covers:
-
-- construction  
-- copying  
-- resizing  
-- pushing/popping  
-- memory correctness  
-- edge cases  
-
----
-
-## 🧠 What This Project Demonstrates
-
-- Understanding of dynamic memory  
-- Safe resource management  
-- Clean API design  
-- Separation of interface and implementation  
-- Test‑driven development  
-- Debugging and incremental development  
-- Real C++ engineering workflow  
-
----
-
-## 📌 Future Improvements
-
-- Convert Vec into a template class (`Vec<T>`)
-- Add move constructor and move assignment (Rule of Five)
-- Add iterators for range‑based loops
-- Add const‑correctness everywhere
-- Add header‑only version
-- Add benchmarks and performance notes
-
+## 🚀 How to Build
+Open `OOP.sln` in Visual Studio and select any project as the startup project.
