@@ -4,5 +4,6 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="CitiesDistance/CitiesDistance.vcxproj" Id="44a95047-ce11-490b-a42d-c6c51c117154" />
+  <Project Path="cvrptw/crvptw/crvptw.vcxproj" Id="501f3015-196e-4112-8ab0-16ce30ad183b" />
   <Project Path="Vector/Vector.vcxproj" Id="f62f821f-9f71-4212-af99-25fbbd02a847" />
 </Solution>
